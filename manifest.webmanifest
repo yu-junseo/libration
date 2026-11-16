@@ -1,6 +1,6 @@
 {
- "name": "태양–지구달 L2 (Sun–Earth/Moon L2)",
- "short_name": "L2",
+ "name": "Libration",
+ "short_name": "Libration",
  "description": "7단계 3D 시각화 — 임시 아이콘",
  "start_url": "./",
  "scope": "./",

@@ -29,11 +29,15 @@
    {
     "file": "data/iau/manifest.json",
     "key": "files"
+   },
+   {
+    "file": "data/textures/sun/manifest.json",
+    "key": "files"
    }
   ],
   "computed_by": "web_export_m4.textures_block",
   "ref_commit": "4797f54",
-  "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+  "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
  },
  "frame": null,
  "time": null,
@@ -463,10 +467,22 @@
      "quality": 90
     }
    },
+   "edge_fix": {
+    "8k_mercury.jpg": [
+     {
+      "column": 8191,
+      "mean_minus_inner": -23.35,
+      "filled_from": [
+       8190,
+       0
+      ]
+     }
+    ]
+   },
    "hi": {
     "file": "m4.planet_mercury_hi.webp",
-    "bytes": 13852438,
-    "sha256": "23a7cbb852be43b8991430a154193c543db8dc50d8c1395682810b431c580b28",
+    "bytes": 13866608,
+    "sha256": "ca5ae31d637c5e0ba95557cfddf05912e50b4d8d5896072b796d58295169eb50",
     "size_px": [
      8192,
      4096
@@ -620,10 +636,22 @@
   },
   "Mars": {
    "source_dir": "data/textures/mars",
+   "edge_fix": {
+    "mars_viking_mdim21_clrmosaic_1km.jpg": [
+     {
+      "column": 0,
+      "mean_minus_inner": -95.15,
+      "filled_from": [
+       1,
+       21338
+      ]
+     }
+    ]
+   },
    "lo": {
     "file": "m4.planet_mars_2k.webp",
-    "bytes": 600876,
-    "sha256": "3804996855f9902d467c32026ec1578e50118b0c392daf9ca31f22faf6a4fd24",
+    "bytes": 600808,
+    "sha256": "ec5029eca23e2d49428955cb133c109a8ca492c80d0d725bfd3690f1990fd5f2",
     "size_px": [
      2048,
      1024
@@ -636,8 +664,8 @@
    },
    "hi": {
     "file": "m4.planet_mars_hi.webp",
-    "bytes": 9256982,
-    "sha256": "7298500a5c5637e2f09a7ccd018cc5bb5f82fbd0cf1a8d931fa41509ed4ccb26",
+    "bytes": 9231324,
+    "sha256": "89177165bbba19d893decb94e897ec27c68807e1347ef4956294b8e5c06f489b",
     "size_px": [
      8192,
      4096
@@ -1318,6 +1346,69 @@
   "attribution": "Solar System Scope (INOVE), https://www.solarsystemscope.com/textures/"
  },
  "planets_rule": "행성 자세 M = R1(ε) · [R3(W) R1(90° − δ0) R3(90° + α0)]ᵀ, α0·δ0·W = IAU WGCCRE 2015 (Archinal 외 2018, NAIF pck00011.tpc). 그림 경도 0 = 본체 +x, 북 = 본체 +z. 타원체 = 체적 평균 반지름 × shape (equator·polar). 그림 출처 docs/텍스처_출처.md",
+ "sun": {
+  "lo": {
+   "file": "m4.sun_2k.webp",
+   "bytes": 368406,
+   "sha256": "ddfdf9ca2f531dad52c163e012b7b522deb96700e876f87bb74aa0fc42af10a5",
+   "size_px": [
+    2048,
+    1024
+   ],
+   "from": "data/textures/sun/2k_sun.jpg",
+   "reduce": "그대로",
+   "webp": {
+    "quality": 90
+   },
+   "mean_lum_linear": 0.36404424525676005
+  },
+  "hi": {
+   "file": "m4.sun_hi.webp",
+   "bytes": 954990,
+   "sha256": "0cbfeb69a86b3f434bab271b5376188e49d63b7612363d3e652e78983550afa2",
+   "size_px": [
+    4096,
+    2048
+   ],
+   "from": "data/textures/sun/8k_sun.jpg",
+   "reduce": "그대로",
+   "webp": {
+    "quality": 90
+   },
+   "mean_lum_linear": 0.362592198115793
+  },
+  "license": "CC BY 4.0",
+  "attribution": "Solar System Scope (INOVE), https://www.solarsystemscope.com/textures/",
+  "coef": {
+   "pole_ra": [
+    286.13,
+    0.0,
+    0.0
+   ],
+   "pole_dec": [
+    63.87,
+    0.0,
+    0.0
+   ],
+   "pm": [
+    84.176,
+    14.1844,
+    0.0
+   ],
+   "ra": [],
+   "dec": [],
+   "pmt": [],
+   "angles": [],
+   "radii_km": [
+    695700.0,
+    695700.0,
+    695700.0
+   ]
+  },
+  "projection": "정거원통 (경도 0 = 그림 가운데, 동쪽이 오른쪽, 위 = 북)",
+  "note": "표시용 그림 — 표시 시각의 실제 관측이 아니다. 밝기 무늬만 쓰고 평균 밝기로 나눔 (색은 지금 태양 색), 가장자리 어두워짐·빛 번짐은 표시용 근사. 조명·낮밤 없음 (스스로 빛남)",
+  "orientation": "IAU WGCCRE 2015 태양 자전 (BODY10: 극 α0 286.13°, δ0 63.87°, W = 84.176° + 14.1844°/일) — 표시용 (그림 무늬가 실제 관측이 아니므로 자전 위상의 뜻은 없음)"
+ },
  "rule": "공개판: 2K 를 먼저 (첫 화면 뒤) → 화면에서 크면 8K (그래픽 묶음 1 — scene/texlod.js). 휴대폰 (가벼운 모드) 은 2K 만. 한 파일판은 2K 만 (결정 ㉗)",
  "single_exclude": [
   "m4.moon_8k.webp",
@@ -1327,6 +1418,7 @@
   "m4.planet_mars_hi.webp",
   "m4.planet_jupiter_hi.webp",
   "m4.planet_saturn_hi.webp",
-  "m4.saturn_ring_hi.webp"
+  "m4.saturn_ring_hi.webp",
+  "m4.sun_hi.webp"
  ]
 }

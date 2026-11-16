@@ -29,7 +29,7 @@
   ],
   "computed_by": "stage5.run_job (같은 설정으로 다시 적분 — 날짜별 값이 stage5.json 과 비트 같음) + web_export.jwst_to_scene",
   "ref_commit": "2e8cc45",
-  "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+  "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
  },
  "frame": "rot_nd",
  "time": null,
@@ -322,7 +322,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -364,7 +364,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -399,7 +399,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -434,7 +434,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -469,7 +469,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -504,7 +504,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     }
    ]
@@ -652,7 +652,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -687,7 +687,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -729,7 +729,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -764,7 +764,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -799,7 +799,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -834,7 +834,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     },
     {
@@ -869,7 +869,7 @@
       ],
       "computed_by": "results/stage5.json",
       "ref_commit": "2e8cc45",
-      "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+      "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
      }
     }
    ]

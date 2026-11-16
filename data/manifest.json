@@ -2,7 +2,7 @@
  "schema": "lagrange-web",
  "schema_version": "1.0.0",
  "generated": {
-  "git_commit": "903f6a1"
+  "git_commit": "c83f9b0"
  },
  "constants": {
   "mu": 3.040423404763651e-06,
@@ -184,7 +184,7 @@
   }
  ],
  "source_hash": {
-  "sha256": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2",
+  "sha256": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf",
   "entries": [
    "web_export.py"
   ],
@@ -372,7 +372,9 @@
    "m4.planet_jupiter_hi.webp",
    "m4.planet_saturn_hi.webp",
    "m4.saturn_ring_2k.webp",
-   "m4.saturn_ring_hi.webp"
+   "m4.saturn_ring_hi.webp",
+   "m4.sun_2k.webp",
+   "m4.sun_hi.webp"
   ],
   "single_exclude": [
    "m4.moon_8k.webp",
@@ -382,7 +384,8 @@
    "m4.planet_mars_hi.webp",
    "m4.planet_jupiter_hi.webp",
    "m4.planet_saturn_hi.webp",
-   "m4.saturn_ring_hi.webp"
+   "m4.saturn_ring_hi.webp",
+   "m4.sun_hi.webp"
   ],
   "설명": "M4 표면 그림 (달, NASA SVS 공공 영역) — 첫 화면 뒤 2K, 그 뒤 8K (휴대폰·한 파일판은 2K)"
  },

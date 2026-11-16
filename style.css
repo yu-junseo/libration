@@ -351,6 +351,9 @@ body.layout-hybrid.info-open { --rp: min(var(--vpanel-right), 100vw); }
 @media (max-width: 767px) { body.layout-hybrid.list-open, body.layout-hybrid.info-open { --lp: 0px; --rp: 0px; } }   /* 휴대폰: 판이 장면을 덮는다 (아래 시트는 Phase 5) */
 
 .layout-hybrid #labels { word-break: normal; overflow-wrap: normal; }   /* 장면 이름표는 그대로 (줄바꿈 규칙 밖) */
+/* 장면 이름표는 아래·위 어둠 띠 (.k-scrim, z 2) 보다 위, 화면 UI (z 4 이상) 보다 아래 (2026-11-15 측정: 휴대폰 아래 어둠 띠가 JWST 이름표를 덮어 글자가 0.36 배로 어두워짐 — 대비 2.4).
+   장면 (캔버스) 은 그대로 어둡게 깔리고 글자만 띠 위로 — UI 와 겹치는 이름표는 원래대로 숨김 (scene.js 겹침 규칙) */
+.layout-hybrid #labels { z-index: 3; }
 
 /* ---- 모드 (13절 D): 일반에서 숨길 것 = data-only="expert" */
 body[data-mode="general"] [data-only="expert"], body[data-mode="expert"] [data-only="general"] { display: none !important; }
@@ -718,3 +721,14 @@ body.k-phone #search-btn { display: none !important; }
 .layout-hybrid .layer-group label:hover input[type=checkbox]:not(:disabled) { background-color: var(--hover); }
 .k-touch .layer-group input[type=checkbox] { width: 44px; height: 44px; margin: 0 -8px 0 -12px; }
 .layout-hybrid .layer-group label.sub { padding-left: 12px; }
+
+/* ================================================================ G7 (2026-11-15): 시간 막대의 JWST 자료 기간 띠 — 그리기만 (누를 자리는 슬라이더 44 px).
+   실제 비행 기록 = 진한 띠 (JWST 색 · 검정 배경 위 대비 3:1 넘게), JPL 예측 = 같은 색 줄무늬 (진하기가 아니라 무늬로 구분 — 색만으로 구분하지 않음). 예측은 짧아도 3 px */
+.k-jband { position: absolute; left: 6px; right: 6px; top: 11px; height: 6px; pointer-events: none; }
+.k-touch .k-jband { top: 19px; }
+.k-jband > span { position: absolute; top: 0; height: 100%; border-radius: 1px; }
+.k-jb-rec { background: rgba(242, 217, 140, .62); }
+.k-jb-pred { min-width: 3px; background: repeating-linear-gradient(135deg, rgba(242, 217, 140, .9) 0 2px, transparent 2px 4px); box-shadow: inset 0 0 0 1px rgba(242, 217, 140, .7); }
+.k-jtip { position: fixed; top: 0; left: 0; z-index: 9; max-width: min(320px, calc(100vw - 32px)); padding: 6px 10px; border-radius: var(--r-ctl, 6px);
+  background: #12151c; border: 1px solid rgba(255, 255, 255, .22); color: #f2f4f9; font-size: 13px; line-height: 1.4; white-space: normal; pointer-events: none; }
+.k-vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }

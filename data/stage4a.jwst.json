@@ -3,8 +3,8 @@
  "id": "stage4a.jwst",
  "kind": "trajectory",
  "title": {
-  "ko": "JWST 재구성 궤적 (4-A, 2022-02-01 ~ 2026-10-05)",
-  "en": "JWST reconstructed trajectory (4-A, 2022-02-01 to 2026-10-05)"
+  "ko": "JWST 재구성 궤적 (4-A, 2022-02-01 ~ 2026-11-09) + JPL 예측 (01U, ~ 2026-12-07)",
+  "en": "JWST reconstructed trajectory (4-A, 2022-02-01 to 2026-11-09) + JPL prediction (01U, to 2026-12-07)"
  },
  "provenance": {
   "stage": "4-A",
@@ -25,11 +25,15 @@
    {
     "file": "data/horizons/jwst_geo_20260921_20261102_10m_fetched20261008.txt.gz",
     "key": "03U 10 분 간격 (9/21 ~ 10/05 00:01 앞, DEFINITIVE)"
+   },
+   {
+    "file": "data/horizons/jwst_geo_20260921_20261207_10m_fetched20261115.txt.gz",
+    "key": "갱신-20261115 — 재구성 하루 간격 (~ 2026-11-09 00:01 앞) + 무분사 예측 (28D_NOBURN_PREDICT_SK_2026313000000_01U, ~ 2026-12-07 00:01)"
    }
   ],
   "computed_by": "stage4a._jwst_interps·_rho_func (하루 간격, 4-A 회전·맥동 좌표) + web_export.jwst_to_scene (10 분 간격, 같은 좌표)",
   "ref_commit": "e1f4a3e",
-  "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+  "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
  },
  "frame": "rot_nd",
  "time": null,
@@ -55,13 +59,47 @@
    "file": "data/horizons/jwst_geo_20260921_20261102_10m_fetched20261008.txt.gz",
    "style": "실선 (10 분 간격 받은 점을 이음 — 태양·EMB 위치는 3 시간 마디 에르미트)",
    "end_rule": "03U DEFINITIVE 끝 2026-10-05 00:01:00 TDB 앞"
+  },
+  "recent": {
+   "t_first_tdb_s": 844430400.0,
+   "t_last_tdb_s": 847454400.0,
+   "n": 36,
+   "step_s": 86400.0,
+   "file": "data/horizons/jwst_geo_20260921_20261207_10m_fetched20261115.txt.gz",
+   "fetched_utc": "2026-11-15T14:33:32Z",
+   "trajectory_table": " Trajectory files                             Start (TDB)         End (TDB) \n ----------------------------------------  -----------------  -----------------\n DEFINITIVE_EPHEMERIS_202135913-2026305    2021-Dec-25 13:01  2026-Nov-09 00:01\n 28D_NOBURN_PREDICT_SK_2026313000000_01U   2026-Nov-09 00:01  2026-Dec-07 00:01\n 5Y_SCHEDULE_2026313000000_01U.V0.1        2026-Dec-07 00:01  2031-Nov-08 23:59",
+   "solution": "DEFINITIVE_EPHEMERIS_202135913-2026305",
+   "style": "점 (받은 점 그대로, 하루 간격 — 4-A 나1 받기 설정과 같은 간격)",
+   "end_rule": "DEFINITIVE 끝 2026-11-09 00:01 TDB 앞",
+   "start_rule": "03U 재구성 끝 점 (2026-10-05 00:00 TDB) 의 같은 시각부터 — 선이 이어지게, 새 해의 점"
+  },
+  "recent_interp": {
+   "step_h": 6.0,
+   "n": 141,
+   "style": "점선 (하루 마디 사이 3차 에르미트 — 위치·속도, 4-A 와 같은 식)",
+   "method": "src/hermite.CubicHermite (지구 중심 위치·속도) + web_export.jwst_to_scene"
+  },
+  "pred": {
+   "t_first_tdb_s": 847454400.0,
+   "t_last_tdb_s": 849873600.0,
+   "n": 29,
+   "step_s": 86400.0,
+   "file": "data/horizons/jwst_geo_20260921_20261207_10m_fetched20261115.txt.gz",
+   "fetched_utc": "2026-11-15T14:33:32Z",
+   "trajectory_table": " Trajectory files                             Start (TDB)         End (TDB) \n ----------------------------------------  -----------------  -----------------\n DEFINITIVE_EPHEMERIS_202135913-2026305    2021-Dec-25 13:01  2026-Nov-09 00:01\n 28D_NOBURN_PREDICT_SK_2026313000000_01U   2026-Nov-09 00:01  2026-Dec-07 00:01\n 5Y_SCHEDULE_2026313000000_01U.V0.1        2026-Dec-07 00:01  2031-Nov-08 23:59",
+   "solution": "28D_NOBURN_PREDICT_SK_2026313000000_01U",
+   "sol": "01U",
+   "end_tdb": "2026-12-07 00:01",
+   "verification": "external",
+   "style": "옅은 점선 (JPL 무분사 예측 — 아직 오지 않은 길, 외부 대조)",
+   "start_rule": "재구성 마지막 점 (2026-11-09 00:00 TDB) 부터 — 선이 이어지게"
   }
  },
  "marker": {
-  "t_tdb_s": 844430400.0,
+  "t_tdb_s": 847454400.0,
   "text": {
-   "ko": "2026-10-05 00:00 TDB (재구성 끝)",
-   "en": "2026-10-05 00:00 TDB (end of reconstruction)"
+   "ko": "2026-11-09 00:00 TDB (재구성 끝)",
+   "en": "2026-11-09 00:00 TDB (end of reconstruction)"
   }
  },
  "join": {
@@ -108,7 +146,7 @@
      ],
      "computed_by": "web_export.jwst_join_block (|r_na1 − r_03U|)",
      "ref_commit": "e1f4a3e",
-     "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+     "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
     }
    },
    {
@@ -143,7 +181,7 @@
      ],
      "computed_by": "results/stage5.json",
      "ref_commit": "2e8cc45",
-     "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+     "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
     }
    }
   ]
@@ -209,7 +247,7 @@
      ],
      "computed_by": "results/stage4a.json",
      "ref_commit": "1590254",
-     "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+     "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
     }
    },
    {
@@ -250,7 +288,7 @@
      ],
      "computed_by": "results/stage4a_주기조사.json",
      "ref_commit": "103fa3f",
-     "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+     "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
     }
    },
    {
@@ -295,7 +333,7 @@
      ],
      "computed_by": "results/stage4a_주기조사.json",
      "ref_commit": "103fa3f",
-     "source_hash": "35f53562f04e2387104596bc634352b32aa6d1453e0cf9a1150f6f8546b41cd2"
+     "source_hash": "233ce6ad13b196912e16734bc82d7568f6b41d8b501014756c8332f0bd1008cf"
     }
    }
   ]
@@ -303,8 +341,8 @@
  "binary": {
   "file": "stage4a.jwst.bin",
   "encoding": "float64-le",
-  "bytes": 251592,
-  "sha256": "18fb901382fb61bb660f9e6a1ed7549f8343fefc254865ecc9f1da8c5cb292ec",
+  "bytes": 256536,
+  "sha256": "dc5f21554f4352530ffcc0bcf6d82f03b8356864e641ca041d2ca3637f5e7679",
   "arrays": {
    "daily": {
     "offset": 0,
@@ -324,6 +362,27 @@
     "offset": 25401,
     "shape": [
      2016,
+     3
+    ]
+   },
+   "recent": {
+    "offset": 31449,
+    "shape": [
+     36,
+     3
+    ]
+   },
+   "recent_interp": {
+    "offset": 31557,
+    "shape": [
+     141,
+     3
+    ]
+   },
+   "pred": {
+    "offset": 31980,
+    "shape": [
+     29,
      3
     ]
    }
