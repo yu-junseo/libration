@@ -1,0 +1,135 @@
+{
+ "schema_version": "1.0.0",
+ "id": "sim.simple",
+ "kind": "model",
+ "title": {
+  "ko": "궤도 유지 시뮬레이터 — 단순 모형 (CR3BP, 3-C 주 헤일로)",
+  "en": "Station-keeping simulator — simple model (CR3BP, 3-C main halo)"
+ },
+ "provenance": {
+  "stage": "3-C",
+  "model": "CR3BP",
+  "model_ko": "원궤도 제한 삼체 문제",
+  "verification": {
+   "tag": "impl",
+   "detail": "implementation",
+   "no": 1,
+   "tag_ko": "구현 검증",
+   "detail_ko": "구현"
+  },
+  "source": [
+   {
+    "file": "results/sim_golden.json",
+    "key": "units · gamma · targets>halo (s0 · T · lambda1 · e1 · w1) · config"
+   }
+  ],
+  "computed_by": "sim_web_export.py"
+ },
+ "frame": "rot_nd",
+ "time": null,
+ "units": {
+  "mu": 3.040423404763651e-06,
+  "time_unit_days": 58.13235249350944,
+  "vel_unit_m_s": 29784.73711344944,
+  "length_unit_km": 149597870.7,
+  "sidereal_year_days": 365.25636
+ },
+ "mu": 3.040423404763651e-06,
+ "gamma": 0.010078240446996234,
+ "halo": {
+  "kind": "halo",
+  "s0": [
+   1.0080104426245113,
+   0.0,
+   -0.0018943477046781624,
+   0.0,
+   0.01112996966137865,
+   0.0
+  ],
+  "T": 3.096667512165845,
+  "lambda1": 1450.561058101598,
+  "e1": [
+   0.7247069539510903,
+   -0.6841949760325711,
+   -0.08171331388899719,
+   2.2007727917704956,
+   -1.3774679371690948,
+   -0.6002469945444494
+  ],
+  "w1": [
+   1.053976722942298,
+   -0.021245710748392006,
+   -0.1772534379170302,
+   0.21400656493844464,
+   0.20204334236260507,
+   -0.024130009799699672
+  ],
+  "name_ko": "3-C 주 헤일로 (28 번, JWST 와 같은 크기)",
+  "name_en": "3-C main halo (No. 28, JWST-sized)"
+ },
+ "config": {
+  "period_days": 21.0,
+  "vel_meas_3sigma_cm_s": 2.0,
+  "burn_mag_3sigma": 0.05,
+  "burn_dir_3sigma_deg": 4.0,
+  "pos_meas_3sigma_km": 0.0,
+  "insertion_pos_3sigma_km": 0.0,
+  "insertion_vel_3sigma_cm_s": 0.0,
+  "first_burn_days": 0.0,
+  "rtol": 1e-12,
+  "atol": 1e-12
+ },
+ "seed": 20261006,
+ "seed_note": "3-C 의 씨앗 (results/sim_golden.json config.seed). 브라우저 난수는 xoshiro128** (D8) 이라 numpy 와 같은 수열은 아니다",
+ "errors_source": {
+  "ko": "NTRS 20140007519 (Dichmann · Alberding · Yu, ISSFD 2014): 속도 측정 각 축 3σ 2 cm/s, 분사 크기 3σ 5 %, 방향 3σ 4°, 간격 21 일",
+  "en": "NTRS 20140007519 (Dichmann, Alberding, Yu, ISSFD 2014): velocity measurement 3σ 2 cm/s per axis, burn magnitude 3σ 5 %, direction 3σ 4°, interval 21 days"
+ },
+ "judgement": {
+  "fail_level_gamma": 0.01,
+  "infeasible_frac": 0.05,
+  "t_min_days": 7.0,
+  "few_burns_median": 5,
+  "eta_margin_by_model": {
+   "cr3bp": 1.0,
+   "ephem": 1.4
+  },
+  "eta_margin_note": "단순 모형 × 1.0 — 11-3-6 (대표 회차를 뺀 첫 어림 ÷ 실제 1.72 (1 년) · 1.01 (10 년), 곱하지 않아도 1 배 이상), 실제 모형 × 1.4 — 10-10-5 (예상 ÷ 실제 0.725 ~ 0.888 의 가장 작은 값의 역수 올림). 설계 13-1 D5",
+  "source": "docs/시뮬레이터_설계.md 8-3 (실패 · 유지 불가 · T_min), 10-10-1 (분사 적음 5 회), 13-1 D5 (예상 여유, 모형별) — 모두 판단값"
+ },
+ "limits": {
+  "period_days": [
+   7.0,
+   60.0
+  ],
+  "cap_cm_s": [
+   0.1,
+   10.0
+  ],
+  "mission_days": [
+   7.0,
+   3653.0
+  ],
+  "n_runs": 1000,
+  "fixed_cm_s": [
+   0.25,
+   100.0
+  ],
+  "fixed_default_cm_s": 2.0,
+  "source": "설계 4절 (간격 7 ~ 60 일 = 선형 점화식 검증 범위), 승인 메모 S3 3 번 (최대 10 년), D7 (1000 회), 13-1 D6 (Bp 의 D 0.25 ~ 100 cm/s · 기본 2 — 판단값, 10-5-4 표 범위 안)"
+ },
+ "propellant": {
+  "m0_kg": 6200.0,
+  "m0_note_ko": "발사 질량 (상한) — 지금 질량은 더 작음. 출처: Horizons JWST 머리말 'total launch mass ~6200 kg (observatory, fuel, launch adaptor)' (5단계가 쓴 값)",
+  "m0_note_en": "Launch mass (upper bound) — the current mass is smaller. Source: Horizons JWST header 'total launch mass ~6200 kg (observatory, fuel, launch adaptor)' (value used in stage 5)",
+  "isp_s": null,
+  "isp_note_ko": "JWST 의 비추력 숫자는 출처를 찾지 못함 (설계 8-6) — 입력해야 계산",
+  "isp_note_en": "No source found for JWST's specific impulse (design 8-6) — enter it to compute"
+ },
+ "card_line": {
+  "ko": "한 번 분사 크기를 제한하면 측정 오차를 덜 따라가 연간 Δv 가 줄어듭니다 (이 모형의 측정 오차 가정에서). 대신 분사가 잦아지고, 제한이 너무 작으면 유지에 실패합니다.",
+  "en": "Capping the size of one burn follows measurement error less, so the annual Δv drops (under this model's measurement-error assumption). Burns become more frequent instead, and too small a cap fails to keep the orbit.",
+  "source": "docs/시뮬레이터_설계.md 8-8-1 (사용자 채택 2026-11-17)"
+ },
+ "golden_sha256": "bda078ed5df5ec7eea4dc92783ef2134a67d80cc28b7e60c6d407b6e30b8b08a"
+}

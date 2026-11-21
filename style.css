@@ -216,6 +216,40 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
   *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
 }
 
+/* ---- 궤도 유지 시뮬레이터 (S2) — 실험실 판 (.lab) 자리를 같이 쓴다. 휴대폰은 .k-vpanel 아래 시트 (shell.css) */
+.sim .sim-row { grid-template-columns: 118px 1fr 64px 40px; }
+.sim .sim-row input[type=date] { grid-column: 2 / 5; }
+.sim .sim-num { width: 64px; }
+.sim-check { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: var(--fs-body); margin: 4px 0; min-height: 28px; }
+.sim-check .sim-num { width: 70px; }
+.sim-acts { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
+.sim-btn { min-height: 32px; }
+.sim-err { display: block; }
+.sim-card { border: 1px solid rgba(143, 163, 196, .35); border-radius: 8px; padding: 8px 10px; margin: 8px 0; }
+.sim-legend { display: flex; flex-direction: column; gap: 3px; margin: 6px 0; }
+.sim-legend-row { display: flex; align-items: center; gap: 8px; font-size: var(--fs-small, 12px); }
+.sim-legend-row.off { opacity: .45; text-decoration: line-through; }
+.sim-ops-band { width: 100%; max-width: 360px; height: auto; display: block; margin: 4px 0; }
+.sim-ops-badge { display: inline-block; border: 1px dashed #e8c872; color: #e8c872; border-radius: 4px; padding: 1px 6px; font-size: var(--fs-small, 12px); margin: 2px 0; }
+.sim-ops-table td, .sim-ops-table th { font-size: var(--fs-small, 12px); }
+.sim-card-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 4px; }
+.sim-line { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; margin: 3px 0; font-size: var(--fs-body); }
+.sim-lab { color: var(--muted); min-width: 150px; }
+.sim-browser, .sim-judge { font-size: var(--fs-small); color: var(--muted); }
+.sim-bad { color: #ff9e80; } .sim-best td { font-weight: 700; }
+.sim-rectable td, .sim-rectable th { padding: 2px 6px; text-align: right; }
+.sim-band { position: absolute; left: 6px; right: 6px; top: 3px; height: 5px; pointer-events: none; }
+.k-touch .sim-band { top: 11px; }
+.sim-bwin { position: absolute; top: 0; height: 100%; background: rgba(127, 209, 255, .45); border-radius: 1px; }
+.sim-btick { position: absolute; top: -2px; width: 1px; height: 9px; background: #ffd166; }
+.sim-method { display: flex; flex-wrap: wrap; gap: 2px 12px; align-items: center; margin: 4px 0; }
+.k-ticks .k-ztick { color: var(--fg-scene); }
+.k-zoom[aria-pressed="true"] { color: #7fd1ff; }
+.k-touch .sim .sim-btn, .k-touch .sim input, .k-touch .sim .close, .k-touch .sim-check { min-height: 44px; }
+.k-touch .sim input[type=checkbox] { min-width: 28px; }
+body.k-phone .sim.k-vpanel { padding: 6px 16px 12px; }
+body.k-phone .sim .sim-row { grid-template-columns: 96px 1fr 64px 34px; }
+
 /* ---- ui/kit.css */
 /* 시안 2 부품 (UI 재설계 Phase 1, 2026-11-10) — docs/UI_재설계.md 12·13절. 값은 모두 토큰 (ui/tokens/C.js → CSS 변수).
    단추 5 종류 × 상태 7 가지 · 꼬리표 D1 (일반 점 / 전문가 모양 기호 + 글자) · 세로 판 패널 · 가장자리 어둠 · 장면 위 글자.

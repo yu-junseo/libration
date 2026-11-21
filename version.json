@@ -1,12 +1,12 @@
 {
  "version": "0.0.0",
- "date": "2026-11-16",
- "commit": "d34efed",
+ "date": "2026-11-21",
+ "commit": "65d61d2",
  "dirty": false,
  "dev": false,
- "data_sha256": "f4d35a5727aad3748a132f5bfdfa627f36a3cb6ca7066f07ddc55eec4f180982",
+ "data_sha256": "ebf3e35e7bdea419af924fcbccca5f43a25fab20efffcec0466a6879035a4f15",
  "text": {
-  "ko": "v0.0.0 · 2026-11-16 · 커밋 d34efed",
-  "en": "v0.0.0 · 2026-11-16 · commit d34efed"
+  "ko": "v0.0.0 · 2026-11-21 · 커밋 65d61d2",
+  "en": "v0.0.0 · 2026-11-21 · commit 65d61d2"
  }
 }

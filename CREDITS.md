@@ -32,6 +32,7 @@
 | 별 (HYG v4.4) | HYG Database v4.4 — David Nash (astronexus), codeberg.org/astronexus/hyg | CC BY-SA 4.0 — 파생 별 파일 (`results/web/m5.stars.*`, 6.5 등급까지·황도 J2000) 도 같은 조건 | M5 화면 (화면 아래 출처 줄). 색지수 없는 별 33 개는 분광형으로 추정 (결정 ㉙) |
 | 분광형 → B−V 표 (86 행, 두 열만) | E. Mamajek, "A Modern Mean Dwarf Stellar Color and Effective Temperature Sequence" v2022.04.16 — 인용 Pecaut & Mamajek (2013, ApJS 208, 9) | 원문에 라이선스 표기 없음 → 원문 파일은 넣지 않고 사실 자료 두 열만 (`data/spectral_ci/manifest.json`) | 결정 ㉙ (2026-11-02) |
 | 은하수 (ESA Gaia sky in colour — 그래픽 묶음 4: 40000×20000 원본 (git 밖) → 면적 평균 8192×4096 → WebP, 2K 먼저. 한 파일판·휴대폰 2K) | ESA/Gaia/DPAC. Acknowledgement: Gaia Data Processing and Analysis Consortium (DPAC); A. Moitinho / A. F. Silva / M. Barros / C. Barata, University of Lisbon, Portugal; H. Savietto, Fork Research, Portugal | CC BY-SA 3.0 IGO — 가공 이미지 (`results/web/m5.milkyway*.webp`) 도 같은 조건 | M5 화면 (결정 ㉕ — SSIM 비교 `results/stage7_M5_은하수_품질.json`). 화면 아래 출처 줄 (#credits) 에 표기 + "표시용 근사" |
+| 궤도 유지 시뮬레이터 (`results/web/sim.simple.json` · `sim.real.json` · `sim.jwst.json`, 2026-11) | 이 저장소의 Python 계산과 정답 (src/sim_*.py · sim_*_export.py). 측정 · 분사 오차 모형과 JWST 면적 140 m² · 반사 계수 1.811 = NTRS 20140007519 (Dichmann · Alberding · Yu, ISSFD 2014). JWST 발사 질량 6,200 kg = Horizons JWST 머리말 (`total launch mass ~6200 kg`, 상한). 복사압 계수 k_B = 5단계 맞춤 (`results/stage5.json`). 실제 분사 목록 · 관찰 범위 = JWST 재구성 (Horizons) 에서 뽑음 (`results/sim_jwst_ops/`) | 결과 · 문서 CC BY 4.0, Horizons 자료 출처 표기 | 시뮬레이터 판의 숫자 칸 출처 (data-source). 브라우저 계산 (구현 검증) |
 
 ## 글꼴
 
